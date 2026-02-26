@@ -1,0 +1,31 @@
+import sympy as sp
+
+# Variable
+x = sp.symbols('x')
+
+# Function
+f = x**3 - 6*x**2 + 9*x
+
+# Derivatives
+f1 = sp.diff(f, x)
+f2 = sp.diff(f1, x)
+
+# Critical points
+critical_points = sp.solve(f1, x)
+
+print("Relative Extrema of f(x) = x^3 - 6x^2 + 9x:")
+
+for pt in critical_points:
+    val = f2.subs(x, pt)
+    if val > 0:
+        extrema_type = "Relative Minimum"
+    elif val < 0:
+        extrema_type = "Relative Maximum"
+    else:
+        extrema_type = "Saddle / Inflection"
+    print(f"x = {pt} → {extrema_type}")
+
+
+
+x = 1 → Relative Maximum
+x = 3 → Relative Minimum
