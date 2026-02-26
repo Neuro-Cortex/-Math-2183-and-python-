@@ -1,0 +1,15 @@
+import sympy as sp
+
+x = sp.symbols('x')
+
+f = x**2 - 4*x + 1
+
+f_prime = sp.diff(f, x)
+
+
+critical_point = sp.solve(f_prime, x)
+
+f_prime, critical_point
+
+
+#the ans will be this (2*x - 4, [2])
