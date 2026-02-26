@@ -1,0 +1,30 @@
+import sympy as sp
+
+x = sp.symbols('x')
+
+# Function
+f = x**3 - 6*x**2 + 9*x
+
+# First & second derivatives
+f1 = sp.diff(f, x)
+f2 = sp.diff(f1, x)
+
+# Solve f'(x) = 0
+turning_points = sp.solve(f1, x)
+
+print("Turning Points for f(x) = x^3 - 6x^2 + 9x:")
+
+for pt in turning_points:
+    val = f2.subs(x, pt)
+    if val > 0:
+        point_type = "Local Minimum"
+    elif val < 0:
+        point_type = "Local Maximum"
+    else:
+        point_type = "Saddle / Inflection"
+    print(f"x = {pt} → {point_type}")
+
+
+ans will the this 
+x = 1 → Local Maximum
+x = 3 → Local Minimum
