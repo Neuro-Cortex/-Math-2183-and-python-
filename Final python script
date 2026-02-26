@@ -1,0 +1,55 @@
+# calculus_analyzer.py
+# Author: Pollob Das
+# Description: Analyze increasing, decreasing, concavity of a function
+
+import sympy as sp
+
+def analyze_function(function_expr):
+    x = sp.symbols('x')
+    
+    # Convert string input to sympy expression
+    f = sp.sympify(function_expr)
+    
+    # First and second derivatives
+    f_prime = sp.diff(f, x)
+    f_double_prime = sp.diff(f_prime, x)
+    
+    # Critical points (f' = 0)
+    critical_points = sp.solve(f_prime, x)
+    
+    # Inflection points (f'' = 0)
+    inflection_points = sp.solve(f_double_prime, x)
+    
+    print("\nFunction:", f)
+    print("First Derivative:", f_prime)
+    print("Second Derivative:", f_double_prime)
+    print("\nCritical Points:", critical_points)
+    print("Possible Inflection Points:", inflection_points)
+    
+    # Increasing / Decreasing test
+    print("\n--- Increasing / Decreasing ---")
+    for point in critical_points:
+        test_val = point - 1
+        if f_prime.subs(x, test_val) > 0:
+            print(f"Left of {point}: Increasing")
+        else:
+            print(f"Left of {point}: Decreasing")
+    
+    # Concavity test
+    print("\n--- Concavity ---")
+    for point in inflection_points:
+        test_val = point - 1
+        if f_double_prime.subs(x, test_val) > 0:
+            print(f"Left of {point}: Concave Up")
+        else:
+            print(f"Left of {point}: Concave Down")
+
+
+if __name__ == "__main__":
+    print("Calculus Analyzer Program")
+    print("Example input: x**3 - 6*x**2 + 9*x")
+    
+    user_input = input("\nEnter a function in terms of x: ")
+    analyze_function(user_input)
+
+x**3 - 6*x**2 + 9*x ans
