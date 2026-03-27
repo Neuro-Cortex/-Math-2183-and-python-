@@ -1,0 +1,42 @@
+import sympy as sp
+
+x, y = sp.symbols('x y')
+
+
+expr = input("Enter a function in terms of x and y (e.g., x**2*y + 3*x*y**2): ")
+
+
+f = sp.sympify(expr)
+
+
+df_dx = sp.diff(f, x)
+df_dy = sp.diff(f, y)
+
+
+d2f_dx2 = sp.diff(f, x, 2)
+d2f_dy2 = sp.diff(f, y, 2)
+d2f_dxdy = sp.diff(f, x, y)
+
+print("\n--- Results ---")
+print("Function f(x,y):", f)
+
+print("\nFirst Order Derivatives:")
+print("∂f/∂x =", df_dx)
+print("∂f/∂y =", df_dy)
+
+print("\nSecond Order Derivatives:")
+print("∂²f/∂x² =", d2f_dx2)
+print("∂²f/∂y² =", d2f_dy2)
+print("∂²f/∂x∂y =", d2f_dxdy)
+
+
+choice = input("\nDo you want to evaluate at a point? (yes/no): ")
+
+if choice.lower() == "yes":
+    x_val = float(input("Enter value of x: "))
+    y_val = float(input("Enter value of y: "))
+
+    print("\n--- Evaluation ---")
+    print("f(x,y) =", f.subs({x: x_val, y: y_val}))
+    print("∂f/∂x =", df_dx.subs({x: x_val, y: y_val}))
+    print("∂f/∂y =", df_dy.subs({x: x_val, y: y_val}))
