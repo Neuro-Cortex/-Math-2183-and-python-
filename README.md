@@ -6,12 +6,19 @@ This repository contains Python implementations of Linear Algebra concepts with 
 # Linear Algebra with Python
 
 ![Python Version](https://img.shields.io/badge/python-3.11-blue)
+
 ![License](https://img.shields.io/badge/license-MIT-green)
+
 ![GitHub Issues](https://img.shields.io/github/issues/<your-username>/linear-algebra-python)
+
 ![GitHub Forks](https://img.shields.io/github/forks/<your-username>/linear-algebra-python?style=social)
+
 ![GitHub Stars](https://img.shields.io/github/stars/<your-username>/linear-algebra-python?style=social)
+
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/<your-username>/linear-algebra-python)
+
 ![Last Commit](https://img.shields.io/github/last-commit/<your-username>/linear-algebra-python)
+
 ![Colab Badge](https://img.shields.io/badge/Run%20on-Colab-red)
 
 ## 🚀 Features
@@ -31,18 +38,9 @@ This repository contains Python implementations of Linear Algebra concepts with 
 - **Linear Transformations**
   - 2D/3D transformation visualization
 
----
 
-## 🛠 Tech Stack
 
-![NumPy](https://img.shields.io/badge/NumPy-1.26-blue)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7-orange)
-![Plotly](https://img.shields.io/badge/Plotly-5.18-purple)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
 
----
-
-## 📂 Repository Structure
 
 ** Features
 - Matrix operations (add, multiply, inverse, determinant)
@@ -115,6 +113,12 @@ Push (git push origin feature/your-feature)
 Open a Pull Request
 
 
+## 🛠 Tech Stack
+
+![NumPy](https://img.shields.io/badge/NumPy-1.26-blue)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.7-orange)
+![Plotly](https://img.shields.io/badge/Plotly-5.18-purple)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
 
 
 
